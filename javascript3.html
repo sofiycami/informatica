@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estructura secuencial</h1>
+    <button id="demo">Ver ejemplo</button>
+    
+
+<p id="resultado1"></p>
+<p id="resultado2"></p>
+
+<h2>Estructura if</h2>
+<button id="demo1">Ver ejemplo</button>
+<h2>Estructura if...else:</h2>
+<button id="demo2">Ver ejemplo</button>
+<h2>Estructura if...else if...else:</h2>
+<button id="demo3">Ver ejemplo</button>
+<script>
+    let button = document.getElementById("demo");
+    button.addEventListener("click", function(){
+    // 1. Entrada de datos
+    let valor1 = prompt('Ingrese el primer número:');
+    let valor2 = prompt('Ingrese el segundo número:');
+    // 2. Selección de los elementos HTML
+    let res1 = document.getElementById("resultado1");
+    let res2 = document.getElementById("resultado2");
+    // 3. Proceso (operaciones matemáticas)
+    let suma = parseInt(valor1) + parseInt(valor2);
+    let producto = parseInt(valor1) * parseInt(valor2);
+    // 4. Salida
+    res1.innerHTML = 'La suma es: ' + suma;
+    res2.innerHTML = 'El producto es: ' + producto;
+    });
+    let boton1 = document.getElementById("demo1");
+    boton1.addEventListener("click", function() {
+    let edad = prompt('Ingrese la edad:');
+    if (edad >= 18) {
+    alert("Puedes ingresar a esta sección");
+}
+});
+
+let boton2 = document.getElementById("demo2");
+boton2.addEventListener("click", function() {
+let edad = prompt('Ingrese la edad:');
+if (edad >= 18) {
+    alert("Puedes ingresar a esta sección");
+} else {
+alert("NO Puedes ingresar a esta sección");
+}
+});
+
+let boton3 = document.getElementById("demo3");
+boton3.addEventListener("click", function() {
+let nota = prompt('Ingrese la calificación:');
+if (nota >= 9) {
+alert("Excelente");
+} else if (nota >= 6) {
+alert("Aprobado");
+} else {
+alert("Debes recuperar");
+}
+});
+</script>
+    
+</body>
+</html>
